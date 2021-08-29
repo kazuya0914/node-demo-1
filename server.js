@@ -28,14 +28,14 @@ var server = http.createServer(function (request, response) {
                       <link rel="stylesheet" href="/x">
                     </head>
                     <body>
-                      <h1>红色h1标题</h1>
+                      <h1>绿色h1标题</h1>
                     </body>                   
 `)
     response.end()
   } else if (path === '/x') {
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/css;charset=utf-8')
-    response.write(`h1{color: yellow;}`)
+    response.write(`h1{color: green;}`)
     response.end()
   } else {
     response.statusCode = 404
